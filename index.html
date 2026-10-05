@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Reserva Apartamento</title>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='css/style.css'>
+</head>
+
+<body>
+    <div class='container'>
+        <div class='steps'>🏠 → 📅 → 🍽️ → 🥤 → 📝 → ✅</div>
+        <section id='welcome'>
+            <h1>🏡 Bem-vinda, Aline</h1>
+            <p>Escolha a data da vistoria no apartamento heheh</p>
+            <button class='btn' onclick='startApp()'>Começar Reserva</button>
+        </section>
+        <section id='dateStep' class='hidden'>
+            <h2>Selecione uma data</h2>
+            <div id='dates' class='dates'></div><button class='btn' onclick='goFood()'>Continuar</button>
+        </section>
+        <section id='foodStep' class='hidden'>
+            <h2>Escolha a refeição</h2>
+            <select id='food'>
+                <option>Pizza</option>
+                <option>Sushi</option>
+                <option>Hamburguer</option>
+            </select>
+            <button class='btn' onclick='goDrink()'>Continuar</button>
+        </section>
+        <section id='drinkStep' class='hidden'>
+            <h2>Escolha a bebida</h2>
+            <select id='drink'>
+                <option>Vinho</option>
+                <option>Chopp</option>
+                <option>Água</option>
+                <option>Suco</option>
+                <option>Refrigerante</option>
+                <option>Sem bebida</option>
+            </select>
+            <button class='btn' onclick='goSuggestion()'>Continuar</button>
+        </section>
+        <section id='suggestionStep' class='hidden'>
+            <h2>📝 Sugestões</h2><textarea id='suggestions' class='suggestion-box'></textarea>
+            <button class='btn' onclick='showSummary()'>Continuar</button>
+        </section>
+        <section id='summaryStep' class='hidden'>
+            <h2>✅ Resumo</h2>
+            <div id='summary'></div>
+        </section>
+    </div>
+    <script src='https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js'></script>
+    <script src='js/app.js'></script>
+</body>
+
+</html>
