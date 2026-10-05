@@ -40,5 +40,5 @@ function confirmarReserva() {
         bebida: drink.value,
         sugestoes: suggestions.value || 'Nenhuma'
     };
-    emailjs.send('service_gmjlpue', 'template_hknjbz8', params).then(() => alert('Agendamento enviada com sucesso!')).catch(() => alert('Configure os dados do EmailJS.'));
+    emailjs.send('service_gmjlpue', 'template_hknjbz8', params).then(() => alert('Agendamento enviado com sucesso!')).catch(() => alert('Configure os dados do EmailJS.'));
 }
